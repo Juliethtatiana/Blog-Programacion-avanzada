@@ -1,0 +1,60 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-nosotros">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      paper-card{
+        display: block;
+        vertical-align: center;
+        margin: 0px 25px;
+
+      }
+      google-map {
+        height: 400px;
+      }
+    </style>
+    <paper-card image="../images/Logo.jpg">
+      <div class="card-content">
+        <div class="cafe-header"><h1>¿Que hacemos?</h1>
+        </div>
+        <p class="cafe-light">Publicamos tus historias, para que puedas pedir consejo o tal vez puedas ayudara alguien con tu relato</p>
+      </div>
+
+    </paper-card>
+
+    <div class="card">
+      <h1>Donde Estudiamos</h1>
+      <google-map latitude="4.628056" longitude="-74.065278" api-key="AIzaSyDW96i1_HqBSNEMb04FFWLoyYkwCWKvSog">
+        <google-map-marker latitude="4.628056" longitude="-74.065278"></google-map-marker>
+      </google-map>
+    </div>
+
+
+  </template>
+
+  <script>
+    class myNosotros extends Polymer.Element {
+      static get is() { return 'my-nosotros'; }
+    }
+
+    window.customElements.define(myNosotros.is, myNosotros);
+  </script>
+</dom-module>

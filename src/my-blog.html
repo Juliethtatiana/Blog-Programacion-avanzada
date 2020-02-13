@@ -1,0 +1,168 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+<link rel="import" href="shared-styles.html">
+
+
+<dom-module id="my-blog">
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      paper-card{
+        display: block;
+        margin: 10px 15px;
+        width: 500px;
+        min-width: 200px;
+      }
+      @media(max-width: 1332px) {
+       paper-card{
+         display: block;
+         width: 100%;
+       }
+      }
+      paper-card.principal{
+        margin: 10px 15px;
+        width: auto;
+      }
+
+    </style>
+
+    <paper-card class="layout vertical principal">
+      <div class="card-content">
+        <div class="cafe-header">
+          <h1>Blog historias</h1>
+        </div>
+        <p class="cafe-light"> En esta parte publicamos las historias más interesantes, esperamos que las disfrutes y te diviertas un rato.</p>
+      </div>
+
+    </paper-card>
+    <div class="layout horizontal wrap">
+      <paper-card image="../images/padre.jpg">
+        <div class="card-content">
+          <div class="cafe-header">
+            <h1></h1>
+          </div>
+          <p class="cafe-light"> Un muchacho de unos 25 años que miraba desde la ventana del tren gritaba sin parar...
+
+            "¡Papá, mira! ¡Los árboles se mueven y se van alejando!".
+            El padre sonrió y una joven pareja sentada cerca, miró el comportamiento infantil del muchacho de 25 años con lástima, que de repente exclamó de nuevo...
+
+            "¡Papá, mira las nubes, están corriendo con nosotros!"
+
+            La pareja no pudo resistirse y le dijo al padre:
+
+            "¿Por qué no llevas a tu hijo a un buen doctor? Su comportamiento infantil indica que tiene algún problema" El padre sonrió y dijo: "lo hice, y recién venimos del hospital y de tratarle. Mi hijo estaba ciego de nacimiento y hoy es el primer día de su vida que puede ver".</p>
+        </div>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite" value="{{favorito1}}"></paper-icon-button>
+
+        </div>
+      </paper-card>
+      <paper-card image="../images/abuelo.jpg">
+        <div class="card-content">
+          <div class="cafe-header">
+            <h1></h1>
+          </div>
+          <p class="cafe-light">Mi bisabuelo tiene 93 años de edad. Aún conserva su sentido del humor. Hace poco le preguntaron, cómo, según él, consiguió haber vivido tantos años. Sonrió con astucia y contestó: "Las series de televisión me enganchan... Tengo que vivir más para averiguar qué pasará en la siguiente temporada".</p>
+        </div>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite" value="{{favorito2}}"></paper-icon-button>
+
+        </div>
+      </paper-card>
+      <paper-card image="../images/orejas.jpg">
+        <div class="card-content">
+          <div class="cafe-header">
+            <h1></h1>
+          </div>
+          <p class="cafe-light">Toda mi vida tenido orejas protuberantes. De alguna manera, sobreviví a las burlas e intimidaciones de mis compañeros de clase, y luego a los chistes en el instituto. Hasta me casé teniendo estas orejas. A mi marido le gustaban mucho, me llamaba a menudo “Orejitas“, lo que me molestaba y me hacía gracia al mismo tiempo. ¡Así que finalmente me operé! Estaba feliz, comencé mi nueva vida, las orejas no sobresalían y me veía estupenda. Pensaba que ya no oiría de mi esposo ni la más mínima palabra sobre este asunto. Pero no, ¡empezó a llamarme ”Sin orejitas"!</p>
+        </div>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite" value="{{favorito3}}"></paper-icon-button>
+
+        </div>
+      </paper-card>
+
+      <paper-card image="../images/grua.jpg">
+        <div class="card-content">
+          <div class="cafe-header">
+            <h1></h1>
+          </div>
+          <p class="cafe-light">
+
+            Tengo un chófer particular que me lleva a trabajar y, a veces, me recoge de algún sitio por la noche a cambio de aumentar un poco su sueldo. Un buen ejemplo de ello fue el pasado fin de semana. Bebí demasiado, lo llamé para que me recogiese. Ya eran las 7 de la mañana. Me senté en el asiento de copiloto y me quedé dormido de inmediato. Al despertarme, miro a mi derecha y veo que el auto sigue en marcha, miro a la izquierda, no hay ningún conductor. Vuelvo a cerrar los ojos, y de repente, me despierto pensando: "¡¿Qué está pasando!?" Agarro el volante en estado de shock, siento pánico. Justo después, me doy cuenta de que viajo en la parte superior de una grúa. Ocurrió que el conductor había decidido entrar un momento a su casa y el coche fue retirado de inmediato por mal estacionamiento.
+          </p>
+        </div>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite" value="{{favorito4}}"></paper-icon-button>
+
+        </div>
+      </paper-card>
+      <paper-card image="../images/papabromista.jpg">
+        <div class="card-content">
+          <div class="cafe-header">
+            <h1></h1>
+          </div>
+          <p class="cafe-light">Mi padre es un verdadero bromista. Un día, cuando yo era niña, me preguntó: “¿Alguna vez has probado huevos de hormiga?“ Contesté que no. Y al día siguiente, me trajo dos: pequeños, blancos, alargados. En una sartén con aceite, los preparó, los puso en un plato y me sirvió. Durante unas horas me resistí a probarlos. Al final, se comió uno y me hizo comer el otro. Era soso y crujía. Ya mayor, le pregunté: ”Papá, ¿qué diablos era aquello?" Y él me contestó: “Tranquila, sólo eran dos granos de arroz”.</p>
+        </div>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite"></paper-icon-button>
+
+        </div>
+      </paper-card>
+      <paper-card image="../images/papainfantil.png">
+      <div class="card-content">
+        <div class="cafe-header">
+          <h1></h1>
+        </div>
+        <p class="cafe-light">Me encantan los hombres que por la mañana llevan a sus hijos a la escuela infantil. Estos hombres severos y fuertes, cargados de mochilas rosa, conejitos y ositos de peluche. Hoy, vi a un verdadero motorista, de los que van con barba larga y chaqueta de cuero negro, hablándole tiernamente a su hija, mientras ésta le ponía una corona de margaritas.</p>
+        <div class="card-actions horizontal justified">
+          <paper-icon-button icon="favorite" on-click="" value="{{favorito5}}"></paper-icon-button>
+
+        </div>
+      </div>
+
+    </paper-card>
+    </div>
+
+  </template>
+
+  <script>
+    class myBlog extends Polymer.Element {
+      static get is() { return 'my-blog'; }
+        static get properties() {
+            return {
+               favorito1:Boolean,
+                favorito2:Boolean,
+                favorito3:Boolean,
+                favorito4:Boolean,
+                favorito5:Boolean
+            };
+        }
+        changeicon(){
+          e.getElementById()
+        }
+
+    }
+
+    window.customElements.define(myBlog.is, myBlog);
+  </script>
+</dom-module>
